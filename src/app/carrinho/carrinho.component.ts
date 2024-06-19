@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CarrinhoService } from '../carrinho.service';
 import { NotifyService } from '../notify.service';
 import { IProdutoCarrinho } from '../produtos/produtos';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-carrinho',
@@ -13,10 +14,30 @@ export class CarrinhoComponent implements OnInit {
   itensCarrinho: IProdutoCarrinho[] =[]
   total = 0;
 
+  formCont = this.formB.group({
+    nome: ["", [
+      Validators.minLength(3),
+      Validators.required
+    ]],
+    assunto: ["", [
+      Validators.minLength(10),
+      Validators.required
+    ]],
+    telefone: ["", [
+      Validators.minLength(11),
+      Validators.required
+    ]],
+    email: ["", [
+      Validators.email,
+      Validators.required
+    ]]
+  });
+
   constructor(
     public carrinhoService: CarrinhoService,
     private router: Router,
-    private notify: NotifyService
+    private notify: NotifyService,
+    private formB: FormBuilder
   ) { }
 
   ngOnInit(): void {

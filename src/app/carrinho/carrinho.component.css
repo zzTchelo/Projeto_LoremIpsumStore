@@ -1,7 +1,7 @@
 .cart-title {
     font-size: 44px;
     color: var(--gray);
-    
+
     padding: 8px 0;
 }
 
@@ -75,4 +75,36 @@ input {
     flex-flow: column nowrap;
     align-items: center;
     font-size: 200px;
+}
+
+.itens__carrinho{
+    width: 50%;
+}
+
+.endereco__pedido{
+    width: 50%;
+}
+
+.main_cart{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form input{
+  width: 100%;
+}
+
+button:disabled {
+  background-color: var(--gray);
 }

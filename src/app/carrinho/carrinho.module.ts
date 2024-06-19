@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CarrinhoRoutingModule } from './carrinho-routing.module';
 import { CarrinhoComponent } from './carrinho.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CarrinhoRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CarrinhoModule { }

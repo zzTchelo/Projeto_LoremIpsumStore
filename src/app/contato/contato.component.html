@@ -3,12 +3,10 @@
 
 <section class="contact_container">
     <form class="contact-form" [formGroup]="formCont">
-
-
         <!-- CAMPO NOME -->
-        <input 
-            type="text" 
-            placeholder="nome" 
+        <input
+            type="text"
+            placeholder="nome"
             formControlName="nome"
             [class.valid]="formCont.controls['nome'].valid"
             [class.invalid]="formCont.controls['nome'].invalid &&
@@ -25,8 +23,8 @@
         </div>
 
         <!-- CAMPO ASSUNTO -->
-        <input 
-        type="text" 
+        <input
+        type="text"
         placeholder="assunto"
         formControlName="assunto"
         [class.valid]="formCont.controls['assunto'].valid"
@@ -41,11 +39,11 @@
             <small class="error-message" *ngIf="formCont.controls['assunto'].hasError('required')">
                 Campo obrigatório!
             </small>
-        </div> 
+        </div>
 
         <!-- CAMPO TELEFONE -->
-        <input 
-        type="tel" 
+        <input
+        type="tel"
         placeholder="Telefone"
         formControlName="telefone"
         mask = "(00) 0 0000-0000"
@@ -64,8 +62,8 @@
         </div>
 
         <!-- CAMPO EMAIL -->
-        <input 
-        type="email" 
+        <input
+        type="email"
         placeholder="Email"
         formControlName="email"
         [class.valid]="formCont.controls['email'].valid"
@@ -83,8 +81,8 @@
         </div>
 
         <!-- CAMPO DESCRICAO -->
-        <textarea 
-        maxlength="100" 
+        <textarea
+        maxlength="100"
         placeholder="Descreva o ocorrido..."
         formControlName="mensagem"
         [class.valid]="formCont.controls['mensagem'].valid"
@@ -101,8 +99,8 @@
             </small>
         </div>
 
-        <button 
-            type="button" 
+        <button
+            type="button"
             (click)="enviar()"
             [disabled]="formCont.invalid">Enviar</button>
     </form>
